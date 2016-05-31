@@ -1,0 +1,32 @@
+{
+  "name": "react-router-browserify-build",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build.js",
+  "scripts": {
+    "start": "NODE_ENV=production browserify index.js -t [ babelify ] -t [ envify ] > bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThibWeb/react-router-browserify-build.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThibWeb/react-router-browserify-build/issues"
+  },
+  "homepage": "https://github.com/ThibWeb/react-router-browserify-build#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1",
+    "envify": "^3.4.0"
+  },
+  "dependencies": {
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.4.1"
+  }
+}
