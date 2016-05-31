@@ -21,3 +21,29 @@ NODE_ENV=production browserify index.js -t [ babelify ] -t [ envify ] > bundle.j
 
 https://github.com/ThibWeb/react-router-browserify-build/blob/master/bundle.js#L26
 
+## The fix
+
+### On the command line
+
+Use the `-g` or `--global-transform` flag to run `envify` or `loose-envify` on the whole bundle:
+
+```
+NODE_ENV=production browserify index.js -t [ babelify ] -g [ envify ] > bundle.js
+```
+
+### With the API
+
+Use the `global flag`:
+
+```js
+b.transform(envify, { global: true });
+// Or as configuration:
+{
+    transform: [
+        [
+            envify,
+            { global: true },
+        ],
+    ],
+}
+```
