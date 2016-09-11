@@ -5,7 +5,7 @@ react-router-browserify-build
 
 ## The issue
 
-(Warning: big file) L248 of https://github.com/ThibWeb/react-router-browserify-build/blob/master/bundle.js#L248.
+(Warning: big file) L248 of https://github.com/thibaudcolas/react-router-browserify-build/blob/master/bundle.js#L248.
 
 When using `browserify` to bundle a project that uses `react-router`, the default configuration of browserify transforms causes around 3kb of minified/gzipped warning messages to end up in the production bundles.
 
@@ -19,7 +19,7 @@ npm run start
 NODE_ENV=production browserify index.js -t [ babelify ] -t [ envify ] > bundle.js
 ```
 
-https://github.com/ThibWeb/react-router-browserify-build/blob/master/bundle.js#L26
+https://github.com/thibaudcolas/react-router-browserify-build/blob/master/bundle.js#L26
 
 ## The fix
 
